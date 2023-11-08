@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" name="op" id="op" disabled required>
+        <div>
+            <button class="operator" value="AC" onclick="op.value=''">AC</button>
+            <button class="operator" value="C" onclick="op.value = op.value.toString().slice(0,-1)">DEL</button>
+            <button class="operator" value="%" onclick="op.value+='%'">%</button>
+            <button class="operator" value="/" onclick="op.value+='/'">/</button>
+        </div>
+        <div>
+            <button class="button" value="7" onclick="op.value+='7'">7</button>
+            <button value="8" onclick="op.value+='8'">8</button>
+            <button value="9" onclick="op.value+='9'">9</button>
+            <button class="operator" value="x" onclick="op.value+='*'">X</button>
+        </div>
+        <div>
+            <button value="4" onclick="op.value+='4'">4</button>
+            <button value="5" onclick="op.value+='5'">5</button>
+            <button value="6" onclick="op.value+='6'">6</button>
+            <button class="operator" value="-" onclick="op.value+='-'">-</button>
+        </div>
+        <div>
+            <button value="1" onclick="op.value+='1'">1</button>
+            <button value="2" onclick="op.value+='2'">2</button>
+            <button value="3" onclick="op.value+='3'">3</button>
+            <button class="operator" value="+" onclick="op.value+='+'">+</button>
+        </div>
+        <div>
+            <button value="00" onclick="op.value+='00'">00</button>
+            <button value="0" onclick="op.value+='0'">0</button>
+            <button value="." onclick="op.value+='.'">.</button>
+            <button id="equalButton" value="=" onclick="op.value=eval(op.value)">=</button>
+        </div>
+    </div>
+
+    <!-- <script src="/script.js"></script> -->
+    <script type="text/javascript">
+
+        function removeLast(){
+
+            let string = document.getElementById('op').value;
+            string = string.slice(0, -1);
+            document.getElementById('op').value = String;
+        }
+    </script>
+</body>
+</html>
+<!--  -->
